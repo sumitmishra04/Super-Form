@@ -1,0 +1,37 @@
+<div class="table-responsive">
+  <table class="table" *ngIf="employees && employees.length">
+    <thead>
+      <tr class="bg-primary">
+        <th></th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Contact Preference</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>
+          <img [src]="employee.dp" width="30px" height="30px" class="dp" alt="user-icon">
+
+        </td>
+        <td>{{ employee.fullName }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.contactPreference }}</td>
+        <td class="btn-toolbar">
+          <button class="btn-success btn btn-sm " title="View Detail" (click)="viewButtonClick(employee.id)">
+            <span class="glyphicon glyphicon-user"></span>
+          </button>
+          <button class="btn-info btn btn-sm " title="Edit Detail" (click)="editButtonClick(employee.id)">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </button>
+          <button class="btn-danger btn btn-sm " title="Delete Employee" (click)="deleteButtonClick(employee.id)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

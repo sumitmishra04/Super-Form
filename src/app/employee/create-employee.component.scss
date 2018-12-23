@@ -1,0 +1,38 @@
+.has-errors{
+    border: 1px solid red
+}
+
+hr{
+    border: 1px solid silver;
+}
+
+.btn{
+    border-radius: 2px;
+}
+
+.app-btn-black{
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    width: 100px;
+
+}
+
+.app-btn-white{
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+    width: 100px;
+
+}
+.panel-primary{
+    border: 1px solid black
+}
+.panel-heading{
+    background-color: black;
+    border-color: black;
+}
+
+.panel-footer{
+    background-color: transparent;
+}

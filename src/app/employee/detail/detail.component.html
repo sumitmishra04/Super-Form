@@ -1,0 +1,42 @@
+<h1>Details</h1>
+
+<!-- "id": 1, "fullName": "Mary S", 
+  "contactPreference": "phone", 
+  "email": "mishrasumit042@dell.com", 
+  "phone": "7059665106", 
+  "skills": [ { "skillName": "d3.js",
+   "experienceInYears": "5", 
+   "proficiency": "beginner" } ]  -->
+
+<div class="employeeCard">
+  <div>
+    <img [src]="employee.dp" width="308px" height="200px" alt="user-icon">
+  </div>
+  <div class="container">
+    <table>
+      <tbody>
+        <tr>
+          <td class="heading">Name</td>
+          <td>{{employee.fullName}}</td>
+        </tr>
+        <tr>
+          <td class="heading">Email Id</td>
+          <td>{{employee.email}}</td>
+        </tr>
+        <tr *ngIf="employee.phone">
+          <td class="heading">Phone</td>
+          <td>{{employee.phone}}</td>
+        </tr>
+        <tr>
+          <td class="heading">Skills</td>
+          <td>
+            <tr *ngFor="let skill of employee.skills">
+              <td>{{skill.skillName}}</td>
+              <td>&nbsp;{{skill.experienceInYears}}y experience</td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

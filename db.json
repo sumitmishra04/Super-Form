@@ -1,0 +1,74 @@
+{
+  "employees": [
+    {
+      "id": 5,
+      "dp": "assets/images/sumitS.png",
+      "fullName": "Sumit",
+      "contactPreference": "email",
+      "email": "john@dell.com",
+      "phone": "3242138971",
+      "skills": [
+        {
+          "skillName": "LINQ",
+          "experienceInYears": "3",
+          "proficiency": "beginner"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "dp": "assets/images/realtor-3.jpeg",
+      "fullName": "Jack",
+      "contactPreference": "email",
+      "email": "jack@dell.com",
+      "phone": "3242138971",
+      "skills": [
+        {
+          "skillName": "LINQ",
+          "experienceInYears": "3",
+          "proficiency": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "dp": "assets/images/realtor-2.jpeg",
+      "fullName": "Mary",
+      "contactPreference": "email",
+      "email": "mary@dell.com",
+      "phone": "5641238971",
+      "skills": [
+        {
+          "skillName": "d3.js",
+          "experienceInYears": "3",
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "Java",
+          "experienceInYears": "2",
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "dp": "assets/images/realtor-1.jpeg",
+      "fullName": "Dave",
+      "contactPreference": "email",
+      "email": "dave123@dell.com",
+      "phone": "9804374711",
+      "skills": [
+        {
+          "skillName": "angular",
+          "experienceInYears": "1",
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "es6",
+          "experienceInYears": "2",
+          "proficiency": "intermediate"
+        }
+      ]
+    }
+  ]
+}
