@@ -1,4 +1,4 @@
-import { Component, OnInit, asNativeElements } from '@angular/core';
+import { Component, OnInit, asNativeElements, ChangeDetectorRef } from '@angular/core';
 // Import FormGroup and FormControl classes
 import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl, FormArray } from '@angular/forms';
 import { CustomValidators } from '../shared/custom.validator';
@@ -49,7 +49,8 @@ export class CreateEmployeeComponent implements OnInit {
   };
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute,
-    private employeeService: EmployeeService, private router: Router) {
+    private employeeService: EmployeeService, private router: Router,
+    private cd: ChangeDetectorRef) {
   }
 
 
@@ -67,6 +68,7 @@ export class CreateEmployeeComponent implements OnInit {
       skills: this.fb.array([
         this.addSkillFormGroup()
       ]),
+      // file: [null, Validators.required]
     });
 
     this.employeeForm.valueChanges.subscribe((value: string) => {
@@ -216,12 +218,33 @@ export class CreateEmployeeComponent implements OnInit {
     this.employee.email = this.employeeForm.value.emailGroup.email;
     this.employee.phone = this.employeeForm.value.phone;
     this.employee.skills = this.employeeForm.value.skills;
+    // this.employee.dp = this.employeeForm.value.file;
+    // console.log(this.employee)
   }
 
   onCancelClick() {
     this.router.navigate(['/']);
   }
-}
+
+  onFileChanged(event) {
+    let reader = new FileReader();
+   
+    if(event.target.files && event.target.files.length) {
+      const [file] = event.target.files;
+      reader.readAsDataURL(file);
+    
+      reader.onload = () => {
+        this.employeeForm.patchValue({
+          file: reader.result
+        });
+        
+        // need to run CD since file load runs outside of zone
+        this.cd.markForCheck();
+      };
+    }
+  }
+  }
+
 
 // Nested form group (emailGroup) is passed as a parameter. Retrieve email and
 // confirmEmail form controls. If the values are equal return null to indicate

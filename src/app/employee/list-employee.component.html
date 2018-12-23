@@ -21,13 +21,13 @@
         <td>{{ employee.phone }}</td>
         <td>{{ employee.contactPreference }}</td>
         <td class="btn-toolbar">
-          <button class="btn-success btn btn-sm " title="View Detail" (click)="viewButtonClick(employee.id)">
+          <button class="btn-user btn btn-sm " title="View Detail" (click)="viewButtonClick(employee.id)">
             <span class="glyphicon glyphicon-user"></span>
           </button>
-          <button class="btn-info btn btn-sm " title="Edit Detail" (click)="editButtonClick(employee.id)">
+          <button class="btn-edit btn btn-sm " title="Edit Detail" (click)="editButtonClick(employee.id)">
             <span class="glyphicon glyphicon-pencil"></span>
           </button>
-          <button class="btn-danger btn btn-sm " title="Delete Employee" (click)="deleteButtonClick(employee.id)">
+          <button class="btn-delete btn btn-sm " title="Delete Employee" (click)="deleteButtonClick(employee.id)">
             <span class="glyphicon glyphicon-trash"></span>
           </button>
         </td>
