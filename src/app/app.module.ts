@@ -10,21 +10,27 @@ import { EmployeeService } from './employee/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuardService } from './employee/auth-gaurd.service';
 import { DetailComponent } from './employee/detail/detail.component';
+import { ConfirmDialogComponent } from './employee/confirm-dialog/confirm-dialog.component';
+import { BsModalService } from 'ngx-bootstrap';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateEmployeeComponent,
     ListEmployeesComponent,
-    DetailComponent
+    DetailComponent,
+    ConfirmDialogComponent
   ],
+  entryComponents: [ConfirmDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
   ],
-  providers: [EmployeeService, AuthGuardService],
+  providers: [EmployeeService, AuthGuardService, BsModalService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
