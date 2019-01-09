@@ -1,0 +1,80 @@
+.has-error{
+    border:1px solid red;
+}
+.custom-control-label {
+    font-size: 14px;
+}
+
+.col-form-label {
+    font-size: 10px;
+}
+
+.form-control {
+    width: 88%;
+    height: 30px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.table-head {
+    background: #f8f9fb
+}
+
+.table-head-row th {
+    font-size: 10px;
+    color: #595959;
+}
+
+.table td,
+.table th {
+    font-size: 10px;
+    border-top: 1px solid transparent;
+    height: 50px;
+}
+
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid transparent;
+}
+
+.table {
+    border: 1px solid #ccc;
+}
+
+.btn-group {
+    float: right;
+}
+
+.table-form-control {
+    width: 43px;
+}
+.date-control{
+    width:100px
+}
+.table-data{
+    padding:0;
+}
+.table{
+    text-align: center;
+}
+.btn-col{
+    padding: 0;
+}
+.mid-col{
+    margin-left: 17%;
+}
+.si-field .form-group{
+    height: 46px;
+}
+input, span {
+    display: inline;
+}
+
+.numsite.ng-invalid:hover{
+    .show-hideTooltip{
+        display: block;
+    }
+}

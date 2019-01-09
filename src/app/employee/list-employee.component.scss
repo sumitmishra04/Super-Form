@@ -8,7 +8,9 @@
     font-weight: 400;
   }
 }
-
+.table>tbody {
+    background-image: linear-gradient(to right bottom, white, #555)
+}
 .table>tbody>tr>td {
   border-top: 1px solid transparent;
   font-weight: 500;
@@ -20,7 +22,7 @@
 }
 
 .table>tbody>tr:hover {
-  background-color: #999;
+  background-color: white;
 }
 
 .btn-user{

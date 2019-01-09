@@ -177,13 +177,6 @@ export class CreateEmployeeComponent implements OnInit {
       if (abstractControl instanceof FormGroup) {
         this.logValidationError(abstractControl);
       }
-      // if (abstractControl instanceof FormArray) {
-      //   for(const control of abstractControl.controls){
-      //     if(control instanceof FormGroup){
-      //       this.logValidationError(control);
-      //     }
-      //   }
-      // }
     });
   }
 

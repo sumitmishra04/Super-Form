@@ -8,7 +8,7 @@ import { DetailComponent } from './employee/detail/detail.component';
 const routes: Routes = [
   {path:'list' , component:ListEmployeesComponent },
   {path:'create' , component: CreateEmployeeComponent, canDeactivate: [AuthGuardService] },
-  {path: 'detail/:id', component:DetailComponent},
+  {path: 'detail/:id', component:DetailComponent, data : {title: 'DetailComponent has a parameter of id'}},
   { path: 'edit/:id', component: CreateEmployeeComponent, canDeactivate: [AuthGuardService]  },
   { path: '', redirectTo: '/list', pathMatch: 'full' }
 ];

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateEmployeeComponent } from './employee/create-employee.component';
@@ -13,14 +14,16 @@ import { DetailComponent } from './employee/detail/detail.component';
 import { ConfirmDialogComponent } from './employee/confirm-dialog/confirm-dialog.component';
 import { BsModalService } from 'ngx-bootstrap';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
+import { NumberDirective } from './shared/numbers-only.directive';
+import { MatTooltipModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
     CreateEmployeeComponent,
     ListEmployeesComponent,
     DetailComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    NumberDirective
   ],
   entryComponents: [ConfirmDialogComponent],
   imports: [
@@ -28,8 +31,11 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    MatTooltipModule,
+    BrowserAnimationsModule
   ],
+  exports:[MatTooltipModule],
   providers: [EmployeeService, AuthGuardService, BsModalService ],
   bootstrap: [AppComponent]
 })
